@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+              
+                <a class="navbar-brand" href="#">
+                    <img src="https://github.com/jjosegallegocesde/imagenes-amazon/blob/main/img/amazon.png?raw=true" alt="logo" height="30">
+                </a>
+
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#"><i class="fas fa-map-marker-alt ms-1 me-1"></i>Enviar a Colombia</a>
+                  </li>
+                </ul>
+
+                <form class="mx-auto w-75">
+                  
+                  <div class="input-group mb-3">
+                    <span class="input-group-text">Todo</span>
+                    <input type="text" class="form-control mx-auto w-20">
+                    <span class="input-group-text"><i class="fas fa-search"></i></span>
+                  </div>
+
+                </form>
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">Cuentas y <span class="fw-bold">Listas</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Devoluciones y Pedidos</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active position-relative" aria-current="page" href="#exampleModal" data-bs-toggle="modal">
+                            <i class="fas fa-shopping-cart fa-2x"></i>
+                            <span class="position-absolute top-10 start-10 translate-middle badge rounded-pill bg-info invisible" id="pildora">
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+
+              </div>
+            </div>
+          </nav>
+    </header>
+
+    <main class="mt-5">
+        
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                          <div class="carousel-item active">
+                            <img src="https://github.com/jjosegallegocesde/imagenes-amazon/blob/main/img/ps5.jpg?raw=true" class="d-block w-100" alt="foto1" height="700">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="https://github.com/jjosegallegocesde/imagenes-amazon/blob/main/img/xbox.jpg?raw=true" class="d-block w-100" alt="foto2" height="700">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="https://github.com/jjosegallegocesde/imagenes-amazon/blob/main/img/nintendo.jpg?raw=true" class="d-block w-100" alt="foto3" height="700">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+
+                    <form>
+
+                        <div class="mb-3">
+                            <label class="form-label">Selecciona consola:</label>
+                            <select class="form-select" id="productos">
+                                <option value="1" selected>PS5</option>
+                                <option value="2">XBOX X SERIES</option>
+                                <option value="3">NINTENDO SWITCH</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Cantidad</label>
+                            <input type="number" class="form-control" id="cantidad" value="1">
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="form-floating">
+                                <textarea class="form-control" id="comentarios"></textarea>
+                                <label for="floatingTextarea">Dirección entrega (Colombia)</label>
+                              </div>
+                        </div>
+
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-primary" type="button" id="boton">Agregar al carrito</button>
+                        </div>
+
+
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+
+    <section>
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Resumen de compra</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="container">
+                <div class="row">
+                  <div class="col-6">
+
+                    <img src="https://github.com/jjosegallegocesde/imagenes-amazon/blob/main/img/fotoCarrito.PNG?raw=true" alt="fotocarrito" class="img-fluid" id="fotoCarrito">
+
+                    <hr>
+                    <p id="pesoTotalCarrito"></p>
+                    <p id="costoCasillero" class="fw-bold"></p>
+
+
+                  </div>
+                  <div class="col-6">
+
+                    <h5 id="tituloCarrito">Tu Carrito de Amazon está vacío</h5>
+                    <p id="precioUnitarioCarrito"></p>
+                    <p id="pesoUnitarioCarrito"></p>
+
+                    <hr>
+                    <p id="costoImpuestos" class="fw-bold"></p>
+                    <h5 id="costoTotal" class="text-success fw-bold"></h5>
+                    <button type="button" class="w-100 btn btn-dark invisible" id="botonCOP">COP ($)</button>
+
+
+
+
+
+                    
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-warning" id="botonLimpiar">Limpiar<i class="ms-2 fas fa-trash-alt"></i></button>
+              <button type="button" class="btn btn-dark">Comprar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    
+    
+    <script src="controlador.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/7b642ec699.js" crossorigin="anonymous"></script>
+</body>
+</html>
